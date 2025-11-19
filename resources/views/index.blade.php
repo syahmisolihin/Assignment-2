@@ -7,25 +7,29 @@
 <body>
 
 <div class='container mt-4'>
-    <h1 class='mb-3'>Data Student</h1>
+    <h1 class='mb-3'>Customer's Data</h1>
 
     <table class='table table-bordered table-striped'>
         <thead>
             <tr>
-                <th>First Name</th>
-                <th>Second Name</th>
-                <th>Gender</th>
+                <th>Name</th>
+                <th>Email</th>
                 <th>Address</th>
+                <th>Gender</th>
+                <th>Phone Number</th>
+                <th>Birthday</th>
             </tr>
         </thead>
 
         <tbody>
-            @foreach ($data_student as $student)
+            @foreach ($data_customer as $customer)
             <tr>
-                <td>{{ $student->FirstName }}</td>
-                <td>{{ $student->SecondName }}</td>
-                <td>{{ $student->Gender }}</td>
-                <td>{{ $student->Address }}</td>
+                <td>{{ $customer->Name }}</td>
+                <td>{{ $customer->Email }}</td>
+                <td>{{ $customer->Address }}</td>
+                <td>{{ $customer->Gender }}</td>
+                <td>{{ $customer->PhoneNumber }}</td>
+                <td>{{ $customer->Birthday }}</td>
             </tr>
             @endforeach
         </tbody>
