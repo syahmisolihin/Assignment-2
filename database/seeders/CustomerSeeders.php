@@ -1,9 +1,12 @@
 <?php
 
 namespace Database\Seeders;
+
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB; 
 use Faker\Factory as Faker;
+
 class CustomerSeeders extends Seeder
 {
     /**
@@ -11,20 +14,17 @@ class CustomerSeeders extends Seeder
      */
     public function run()
     {
+        $faker = Faker::create();
 
-        $faker =Faker::create();
-
-        for ($i=1; $i<=5;$i++){
-                DB::table('customers')->insert([
-    'name'=>$faker->name,
-    'email'=>$faker->email,
-    'address'=>$faker->country,
-    'phoneNumber'=>$faker->phoneNumber,
-    'gender'=>$faker->randomElement(['M','F']),
-    'birthday'=>$faker->date($format='y-m-d'),
-
-]);
-
+        for ($i = 1; $i <= 5; $i++) {
+            DB::table('customers')->insert([
+                'Name'        => $faker->name,
+                'Email'       => $faker->email,
+                'Address'     => $faker->country,
+                'PhoneNumber' => $faker->phoneNumber,
+                'Gender'      => $faker->randomElement(['M','F']),
+                'Birthday'    => $faker->date('Y-m-d'),
+            ]);
         }
     }
 }
