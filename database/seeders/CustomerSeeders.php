@@ -27,4 +27,10 @@ class CustomerSeeders extends Seeder
             ]);
         }
     }
+
+    public function create(Request $request){
+
+        \App\Models\customers::create($request->all());
+        return redirect('/form')->with('success','New data insert');
+    }
 }
