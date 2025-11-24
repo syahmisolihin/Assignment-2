@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
+use DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB; 
 use Faker\Factory as Faker;
 
 class CustomerSeeders extends Seeder
@@ -14,23 +14,18 @@ class CustomerSeeders extends Seeder
      */
     public function run()
     {
-        $faker = Faker::create();
+        $faker=Faker::create();
 
-        for ($i = 1; $i <= 30; $i++) {
-            DB::table('customers')->insert([
-                'Name'        => $faker->name,
-                'Email'       => $faker->email,
-                'Address'     => $faker->country,
-                'PhoneNumber' => $faker->phoneNumber,
-                'Gender'      => $faker->randomElement(['M','F']),
-                'Birthday'    => $faker->date('Y-m-d'),
+        for($i=1;$i<=30; $i++){
+            DB::table('customer')->insert([
+                'name'=>$faker->name,
+                'email'=>$faker->email,
+                'address'=>$faker->address,
+                'phoneNumber'=>$faker->phoneNumber(),
+                'gender'=>$faker->randomElement(['M','F']),
+                'birthday'=>$faker->date('Y-m-d'),
             ]);
         }
-    }
-
-    public function create(Request $request){
-
-        \App\Models\customers::create($request->all());
-        return redirect('/form')->with('success','New data insert');
+        //
     }
 }
