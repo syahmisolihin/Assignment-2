@@ -8,7 +8,7 @@ class CustomerController extends Controller
 {
     public function index()
     {
-    $data_customer = \App\Models\customer::all();
+    $data_customer = \App\Models\Customer::all();
     return view('index',compact('data_customer'));
 }
 }

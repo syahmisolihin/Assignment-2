@@ -24,12 +24,12 @@
         <tbody>
             @foreach ($data_customer as $customer)
             <tr>
-                <td>{{ $customer->Name }}</td>
-                <td>{{ $customer->Email }}</td>
-                <td>{{ $customer->Address }}</td>
-                <td>{{ $customer->Gender }}</td>
-                <td>{{ $customer->PhoneNumber }}</td>
-                <td>{{ $customer->Birthday }}</td>
+                <td>{{ $customer->name }}</td>
+                <td>{{ $customer->email }}</td>
+                <td>{{ $customer->address }}</td>
+                <td>{{ $customer->gender }}</td>
+                <td>{{ $customer->phoneNumber }}</td>
+                <td>{{ $customer->birthday }}</td>
             </tr>
             @endforeach
         </tbody>
