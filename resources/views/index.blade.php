@@ -24,6 +24,7 @@
     </label>
 
     <button type="submit">Filter</button>
+    <hr>
 </form>
 
 
