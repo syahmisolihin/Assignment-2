@@ -8,7 +8,7 @@
 
 <body>
 
-    <!-- Page Header -->
+
     <h1 class="bg-info text-white text-center p-4">Customer's Data</h1>
 
     <div class="container-fluid bg-gradient p-5">
@@ -38,7 +38,7 @@
 
         </form>
 
-        <!-- Customer Table -->
+        
         <div class="table-responsive">
             <table class="table table-bordered table-striped table-hover align-middle shadow-sm bg-white">
                 <thead class="table-primary">
