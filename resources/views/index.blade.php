@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Student Database</title>
+    <title>Customer Database</title>
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet'>
 </head>
 <body>
 
-<div class='container mt-4'>
-    <h1 class='mb-3'>Customer's Data</h1>
+<h1 class=' bg-info text-white  text-center p-4' >Customer's Data</h1>
+<div class='container-fluid bg-gradient p-5'>
+    
 
     <form action="/" method="GET">
     <label>Gender:</label>
@@ -28,9 +29,9 @@
 </form>
 
 
-    <table class='table table-bordered table-striped'>
+    <table class='table table-bordered table-striped bg-white'>
         <thead>
-            <tr>
+            <tr class="bg-primary bg-gradient p-3">
                 <th>Name</th>
                 <th>Email</th>
                 <th>Address</th>
@@ -42,7 +43,7 @@
 
         <tbody>
             @foreach ($data_customer as $customer)
-            <tr>
+            <tr class="bg-info bg-gradient p-3">
                 <td>{{ $customer->name }}</td>
                 <td>{{ $customer->email }}</td>
                 <td>{{ $customer->address }}</td>
